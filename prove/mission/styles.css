@@ -1,0 +1,74 @@
+/* CSS for mission/index.html */
+
+body {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+}
+
+#home-page-link {
+    position: absolute;
+    margin: 0 auto;
+}
+
+#content {
+    align-self: center;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    padding: 2%;
+    max-width: 603px;
+    width: 50%;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+header, main, footer {
+    margin: 0 auto;
+    width: 73%;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#title {
+    margin: 25px auto 12px auto;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 5vh;
+    font-width: 200%;
+    font-weight: 400;
+    font-size: 35px;
+}
+
+#university {
+    font-size: 12px;
+    color: #0571b8;
+}
+
+header hr {
+    height: 1px;
+    border: none;
+    background-color: #e3e3e3;
+}
+
+/* main {
+
+} */
+
+/* main p {
+
+} */
+
+/* #list {
+
+} */
+
+/* footer {
+
+} */
+
+footer img {
+    margin: auto 0;
+    width: 25%;
+}
