@@ -1,0 +1,72 @@
+/* CSS for meta-css ponder */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-size: 20px;
+}
+
+#content {
+    aspect-ratio: 1;
+    padding: 2%;
+    outline: 23px solid #dddddd;
+    outline-offset: 0;
+    max-width: 627px;
+    /* max-height: 627px; */
+    width: 50%;
+    border: 1px solid #c5c5c5;
+    background-color: #dddddd;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#title {
+    font-size: 30px;
+}
+
+#description {
+    font-size: 19px;
+    color: #035f9c;
+}
+
+header hr {
+    margin: 17px auto 22px auto;
+    width: 80%;
+    height: 3px;
+    background-color: #035f9c;
+    border: none;
+}
+
+main {
+    margin: 0 auto;
+    width: 51%;
+}
+
+#logos {
+    width: 100%;
+}
+
+#topics {
+    /* display: none; */
+    font-size: 15px;
+}
+
+main h2 {
+
+    font-size: 23px;
+    text-align: center;
+}
+
+main .list {
+    list-style: none;
+    margin-left: -23px;
+}
