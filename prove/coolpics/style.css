@@ -1,67 +1,96 @@
 
-/* This first part of the css will be the universal content */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
-body, #content, header, footer, main {
-    margin: 0;
-    padding: 0;
+/* Normalization AND what it should look like on a phone.*/
+
+* {
+    font-family: "Nunito", "Quicksand", Cambria;
 }
 
 body {
-    height: 100vh;
-}
-
-#content {
-    height: 100%;
-}
-
-header *, main *, footer * {
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     text-align: center;
+    background-color: #2a81e2;
 }
 
-header, footer{
-    background-color: #2a81e2;
+header, footer {
+    padding: 13px 0;
 }
 
 header *, footer * {
     color: white;
 }
 
-header {
-    height: 15%;
-    position: relative;
-}
-
 #title {
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    width: fit-content;
-    height: fit-content;
-    font-size: 200%;
+    font-size: 40px;
 }
 
-#menu {
-    position: absolute;
-    inset: 0;
-    margin: auto auto 12px auto;
-    width: fit-content;
-    height: fit-content;
+#menu-word {
+    font-size: 30px;
 }
 
-/* #menu * {
+#menu-word:hover {
+    cursor: pointer;
+}
 
-} */
+#menu a {
+    font-size: 27px;
+    margin: 5% auto 10% auto;
+}
 
 main {
-    height: 80%;
+    padding: 13px 0;
+    width: 100%;
     background-color: #cccccc;
 }
 
-#coolpics {
+main h2 {
+    font-size: 33px;
+}
+
+#coolpics div {
+    aspect-ratio: 1;
+    margin: 7%;
+    overflow: hidden;
+    border: 7px solid white;
+    border-radius: 1%;
+    box-shadow: 5px 5px 5px black;
+}
+
+#coolpics div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hidden {
     display: none;
 }
 
-footer {
-    height: 5%;
+@media screen and (min-width: 700px) and (max-width: 999px) {
+    #coolpics {
+        display: grid;
+        grid-template-columns: auto auto;
+     }
+}
+
+@media screen and (min-width: 1000px) {
+    #menu-word {
+        display: none;
+    }
+    #menu {
+        margin: 0 15%;
+        display: flex;
+    }
+    #menu p {
+        margin: 0 auto;
+    }
+    #coolpics {
+        margin: auto 7%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+     }
 }
