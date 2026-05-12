@@ -1,0 +1,67 @@
+
+/* This first part of the css will be the universal content */
+
+body, #content, header, footer, main {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+#content {
+    height: 100%;
+}
+
+header *, main *, footer * {
+    margin: 0 auto;
+    text-align: center;
+}
+
+header, footer{
+    background-color: #2a81e2;
+}
+
+header *, footer * {
+    color: white;
+}
+
+header {
+    height: 15%;
+    position: relative;
+}
+
+#title {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-size: 200%;
+}
+
+#menu {
+    position: absolute;
+    inset: 0;
+    margin: auto auto 12px auto;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* #menu * {
+
+} */
+
+main {
+    height: 80%;
+    background-color: #cccccc;
+}
+
+#coolpics {
+    display: none;
+}
+
+footer {
+    height: 5%;
+}
