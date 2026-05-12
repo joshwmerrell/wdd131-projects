@@ -70,12 +70,16 @@ main h2 {
     display: none;
 }
 
+/* Update css if the screen size relects a tablet. */
+
 @media screen and (min-width: 700px) and (max-width: 999px) {
     #coolpics {
         display: grid;
         grid-template-columns: auto auto;
      }
 }
+
+/* Update css if the screen size relects a computer. */
 
 @media screen and (min-width: 1000px) {
     #menu-word {
