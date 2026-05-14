@@ -21,11 +21,13 @@ function openModal(e) {
 // Close modal on button click
 closeButton.addEventListener('click', () => {
     modal.close();
+    modalImage.src = "";
 });
 
 // Close modal if clicking outside the image
 modal.addEventListener('click', (event) => {
     if (event.target === modal) {
         modal.close();
+        modalImage.src = "";
     }
 });
