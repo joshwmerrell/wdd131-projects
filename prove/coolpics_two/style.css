@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Normalization AND what it should look like on a phone.*/
+
+* {
+    font-family: "Nunito", "Quicksand", Cambria;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #2a81e2;
+}
+
+header, footer {
+    padding: 13px 0;
+}
+
+header *, footer * {
+    color: white;
+}
+
+#title {
+    font-size: 40px;
+}
+
+#menu-word {
+    font-size: 30px;
+}
+
+#menu-word:hover {
+    cursor: pointer;
+}
+
+#menu a {
+    font-size: 27px;
+    margin: 5% auto 10% auto;
+}
+
+main {
+    padding: 13px 0;
+    width: 100%;
+    background-color: #cccccc;
+}
+
+main h2 {
+    font-size: 33px;
+}
+
+#coolpics div {
+    aspect-ratio: 1;
+    margin: 7%;
+    overflow: hidden;
+    border: 7px solid white;
+    border-radius: 1%;
+    box-shadow: 5px 5px 5px black;
+}
+
+#coolpics div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Update css if the screen size relects a tablet. */
+
+@media screen and (min-width: 700px) and (max-width: 999px) {
+    #coolpics {
+        display: grid;
+        grid-template-columns: auto auto;
+     }
+}
+
+/* Update css if the screen size relects a computer. */
+
+@media screen and (min-width: 1000px) {
+    #menu-word {
+        display: none;
+    }
+    #menu {
+        margin: 0 15%;
+        display: flex;
+    }
+    #menu p {
+        margin: 0 auto;
+    }
+    #coolpics {
+        margin: auto 7%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    dialog img {
+        width: 50%;
+    }
+}
