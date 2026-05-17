@@ -19,6 +19,9 @@ function openModal(e) {
     // Code to show modal  - Use event parameter 'e'   
     if (e.target.src){
         let modalImgSrc = e.target.src;
+        if (modalImgSrc.includes("sm")) {
+            modalImgSrc = modalImgSrc.replace("sm", "full");
+        }
         modalImage.src = modalImgSrc;
         modal.showModal();
     }
