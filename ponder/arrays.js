@@ -78,7 +78,7 @@ document.getElementById("car-object").innerHTML += `
     <p>${car.type}</p>
     <p>${car.model}</p>
     <p>${car.color}</p>
-    `;
+    `; 
 
 
 
