@@ -88,7 +88,7 @@ form.addEventListener("submit", event => {
       `
     }
     outputResult.innerHTML = result;
+    form.reset();
   }
 
-  form.reset();
 });
