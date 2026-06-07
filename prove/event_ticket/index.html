@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD131 Week 7 Prove - Event Ticket">
+    <meta name="author" content="Merrell, Joshua">
+    <link href="style.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Event Ticket</title>
+</head>
+<body>
+    
+    <header>
+        <a href="../../index.html">Home Page</a>
+    </header>
+
+    <main class="wrapper">
+
+        <h1>Event Ticket</h1>
+        <form id="eventForm">
+
+            <div class="field">
+                <label for="first-name">First Name</label>
+                <input id="first-name" name="firstName" type="text" required />
+            </div>
+
+            <div class="field">
+                <label for="last-name">Last Name</label>
+                <input id="last-name" name="lastName" type="text" required />
+            </div>
+
+            <div class="field full">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" required />
+            </div>
+
+            <div class="field">
+                <label for="user-type">Type</label>
+                <select
+                    id="user-type"
+                    name="userType"
+                required>
+                    <option value="">Choose One</option>
+                    <option value="student" aria-controls="student-id">Student</option>
+                    <option value="guest" aria-controls="access-code">Guest</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="event-date">Event Date</label>
+                <input id="event-date" name="eventDate" type="date" required />
+            </div>
+
+            <div class="full" id="student-id-container" hidden>
+                <div class="field">
+                    <label for="student-id">Student #</label>
+                    <input id="student-id" name="studentId" type="text" />
+                </div>
+            </div>
+
+            <div class="full" id="access-code-container" hidden>
+                <div class="field">
+                    <label for="access-code">Access Code</label>
+                    <input id="access-code" name="accessCode" />
+                </div>
+            </div>
+
+            <button class="full" type="submit">Submit Preferences</button>
+        </form>
+
+        <section id="output" aria-live="polite"></section>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
