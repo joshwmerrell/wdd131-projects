@@ -1,0 +1,62 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 20px;
+    max-width: 1280px;
+    margin: auto;
+    padding: 1em;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    list-style-type: none;
+}
+
+hr{
+    margin-top: 50px;
+}
+
+/* Styles for items for desktop screen */
+@media screen and (min-width: 600px) {
+    .media-card {
+        display: flex;
+        gap: 20px;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1%;
+    }
+
+    .gallery .media-card {
+        width: 48%;
+        align-items: center;
+    }
+
+    .gallery .media-card .media-card-image {
+        max-height: 130px;
+    }
+
+    .gallery .media-card .media-card-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery .media-card .media-card-content h3 {
+        justify-self: flex-start;
+    }
+
+    .gallery .media-card .media-card-content p {
+        justify-self: center;
+    }
+}
