@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<title>Project App Plan</title>
+		<link type="text/css" rel="stylesheet" href="app-plan.css" />
+	</head>
+
+	<body>
+		<header>
+			<h1><a href="../index.html" style="color: white;">Brave The Darkness</a> Project Plan</h1>
+			<h2>Joshua Merrell</h2>
+			<h2>WDD 131</h2>
+		</header>
+		<main>
+			<a href="../../index.html"><h2>Home Page</h2></a>
+			
+			<hr />
+			<h2>Overview</h2>
+			<h3>Purpose</h3>
+			<p>A game to make people think about their choices and always look to the light.</p>
+
+			<h3>Audience</h3>
+			<p>Young Adults</p>
+
+			<h3>Dynamic elements</h3>
+			<p>
+				Provided by javascript, dynamic elements allow an HTML page to interact with the user, itself, other pages, and databases outside of it and or its home network. I will be using these elements to update the page as the game, which this site will be, progresses. DOM-wise, for this web-app game, there will be only one html file, the index. The contents of this page will update every time the player makes a choice in the game as if the user has changed pages.
+			</p>
+
+			<hr />
+			<h2>Branding</h2>
+			<h3>Website Logo</h3>
+			<img id="logo-img" src="assets/logo/logo_small.png" alt="Logo image" />
+			<hr />
+			<h2>Style Guide</h2>
+
+			<h3>Color Palette</h3>
+			<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+			<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+			Palette URL:
+			<a
+				href="https://coolors.co/050f00-172c0d-2a5217-7bab66-bbe9a7"
+				target="_blank"
+				>https://coolors.co/050f00-172c0d-2a5217-7bab66-bbe9a7</a
+			>
+
+			<table class="colors">
+				<tbody>
+					<tr>
+						<th>Primary</th>
+						<th>Secondary</th>
+						<th>Accent 1</th>
+						<th>Accent 2</th>
+					</tr>
+					<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+					<tr>
+						<td class="primary">[#050F00]</td>
+						<td class="secondary">[#7BAB66]</td>
+						<td class="accent1">[#2A5217]</td>
+						<td class="accent2">[#BBE9A7]</td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+
+			<h3>Pseudocode for your project</h3>
+
+			<p>
+				const pages = {page objects};
+				<br>
+				<br>
+				function openPage(page) {
+				<br>
+				&emsp;const pageTemplate = htmlPageStuffWithPageAttributes;
+				<br>
+				&emsp;document.body.innerHtml = pageTemplate;
+				<br>
+				};
+				<br>
+				<br>
+				openPage(mainMenuPage);
+				<br>
+				<br>
+				pageButtonOrLink.addEventListener("click", openPage(nextPage));
+			</p>
+
+			<h3>Wireframes</h3>
+			<h4>
+				Main Menu [page 1] Frame
+			</h4>
+            <p>
+                <b>Logo:</b><br>&emsp;&emsp;<i>Probably a "B" for brave in "Brave The Darkness";</i>
+				<br><br>
+                <b>Title:</b><br>&emsp;&emsp;<i>Brave The Darkness;</i>
+				<br><br>
+                <b>Description:</b><br>&emsp;&emsp;<i>You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness?;</i>
+				<br><br>
+                <b>Navigation Links:</b><br>&emsp;&emsp;<i>Home Page;</i>
+				<br><br>
+                <b>Buttons:</b><br>&emsp;&emsp;<i>Brave, Flee;</i>
+				<br><br>
+                <b>Colors:</b><br>&emsp;&emsp;<i>shades of green, slightly muted;</i>
+            </p>
+            <img class="wireframe-img" src="assets/wireframes/wireframe_main_menu_page.png" />
+            <h4>
+                Step [page 2] Frame
+            </h4>
+            <p>
+                <b>Logo:</b><br>&emsp;&emsp;<i>Probably a "B" for brave in "Brave The Darkness";</i>
+				<br><br>
+                <b>Navigation Links:</b><br>&emsp;&emsp;<i>Home Page, Main Menu, Map (optional), Credits;</i>
+				<br><br>
+                <b>Step Image:</b><br>&emsp;&emsp;<i>Typically a landspace of the setting in which the user is currently in within the game.</i>
+				<br><br>
+                <b>Step Name:</b><br>&emsp;&emsp;<i>An artisitic name of the step the user is in. For example, the setting of the first step is a clearing within the trees. So, the name of this step could be one of the following: "The Center Place", "The Start of Your Journey", or simply "The Clearing."</i>
+				<br><br>
+                <b>Step Narration:</b><br>&emsp;&emsp;<i>This game follows an underlying story/narrative. Therefore, the steps are narrated along the way. One only begins to understand the story once they are able to finish the game successfully. The narration describes the current setting in which the user is in and how they may proceed with the game.</i>
+				<br><br>
+                <b>Step Decisions:</b><br>&emsp;&emsp;<i>There are anywhere between 2 and 4 decisions for each step. They will be placed in proximity to the step narration. Currently, it is planned to by below the narration.</i>
+            </p>
+            <img class="wireframe-img" src="assets/wireframes/wireframe_step_page.png" />
+		</main>
+	</body>
+</html>
