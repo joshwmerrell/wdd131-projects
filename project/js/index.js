@@ -42,7 +42,8 @@ mainMenuButtons.addEventListener("click", event => {
         openStep(event.target.value);
     }
     else if (pressFlee) {
-        window.close();
+        // This may help me close the window programically rather than just window.close().
+        window.open('', '_self').close();
     }
 });
 
