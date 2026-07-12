@@ -6,7 +6,7 @@ export const mainMenu = {
                                         imageAlt: "B",
                                         words: ["rave", "The", "Darkness"]
                                     },
-                            introduction: "You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness?",
+                            introduction: "You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness? (Do know that the flee button closes the game.)",
                             decisions:  [
                                             {
                                                 nextStep: "step_0",
