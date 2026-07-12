@@ -2,7 +2,22 @@
 
 export const mainMenu = {
                             title: "Brave The Darkness",
-                            introduction: ""
+                            introduction: "You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness?",
+                            decisions:  [
+                                            {
+                                                nextStep: "step_0",
+                                                label: "Brave"
+                                            },
+                                            {
+                                                nextStep: "exit",
+                                                label: "Flee"
+                                            }
+                                        ],
+                            background: {
+                                            defaultColor: "#050F00",
+                                            imageSrc: "",
+                                            imageAlt: ""
+                                        }
                         };
 
 export const steps = [
@@ -33,9 +48,21 @@ export const steps = [
                     ],
         call_to_action: "Do you...",
         decisions:  [
-                        ["step_1", "Walk into the woods to find a way out?", 1],
-                        ["step_2", "Do nothing and wait for someone to find you?", 1],
-                        ["step_3", "Try to call someone?", 1]
+                        {
+                            nextStep: "step_1",
+                            label: "Walk into the woods to find a way out?",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_2",
+                            label: "Do nothing and wait for someone to find you?",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_3",
+                            label: "Try to call someone?",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -60,9 +87,21 @@ export const steps = [
                     ],
         call_to_action: "Do you...",
         decisions:  [
-                        ["step_1", "Walk into the woods to find a way out?", 1],
-                        ["step_2", "Do nothing and wait for someone to find you?", 1],
-                        ["step_3", "Try to call someone?", 1]
+                        {
+                            nextStep: "step_1",
+                            label: "Walk into the woods to find a way out?",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_2",
+                            label: "Do nothing and wait for someone to find you?",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_3",
+                            label: "Try to call someone?",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -88,9 +127,21 @@ export const steps = [
                     ],
         call_to_action: "Which trail do you go down?",
         decisions:  [
-                        ["step_1_1", "Sunset Mountain", 0],
-                        ["step_1_2", "Evergreen City", 1],
-                        ["step_1_3", "Grizzly Camp", 1],
+                        {
+                            nextStep: "step_1_1",
+                            label: "Sunset Mountain",
+                            hidden: true
+                        },
+                        {
+                            nextStep: "step_1_2",
+                            label: "Evergreen City",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_1_3",
+                            label: "Grizzly Camp",
+                            hidden: false
+                        }
                     ],
         choiceType: "textInput",
         unlockStory: {
@@ -122,7 +173,11 @@ export const steps = [
                     ],
         call_to_action: "",
         decisions:  [
-                        ["step_1_1_0", "Next Page", 1]
+                        {
+                            nextStep: "step_1_1_0",
+                            label: "Next Page",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -141,7 +196,13 @@ export const steps = [
                         "You are safe. You are found."
                     ],
         call_to_action: "",
-        decisions:  [],
+        decisions:  [
+                        {
+                            nextStep: "",
+                            label: "",
+                            hidden: true
+                        }
+                    ],
         choiceType: "button",
         unlockStory: {
                         unlock: false,
@@ -165,8 +226,16 @@ export const steps = [
                     ],
         call_to_action: "Do you try again?",
         decisions:  [
-                        ["step_0_1", "Yes", 1],
-                        ["", "No", 1]
+                        {
+                            nextStep: "step_0_1",
+                            label: "Yes",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "mainMenu",
+                            label: "No",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -192,8 +261,16 @@ export const steps = [
                     ],
         call_to_action: "Do you try again?",
         decisions:  [
-                        ["step_0_1", "Yes", 1],
-                        ["", "No", 1]
+                        {
+                            nextStep: "step_0_1",
+                            label: "Yes",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "mainMenu",
+                            label: "No",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -217,8 +294,16 @@ export const steps = [
                     ],
         call_to_action: "Do you...",
         decisions:  [
-                        ["step_2_1", "Follow the animal tracks?", 1],
-                        ["step_2_2", "Make a shelter?", 1]
+                        {
+                            nextStep: "step_2_1",
+                            label: "Follow the animal tracks?",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_2_2",
+                            label: "Make a shelter?",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -243,8 +328,16 @@ export const steps = [
                     ],
         call_to_action: "Do you try again?",
         decisions:  [
-                        ["step_0_1", "Yes", 1],
-                        ["", "No", 1]
+                        {
+                            nextStep: "step_0_1",
+                            label: "Yes",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "mainMenu",
+                            label: "No",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -269,8 +362,16 @@ export const steps = [
                     ],
         call_to_action: "Do you try again?",
         decisions:  [
-                        ["step_0_1", "Yes", 1],
-                        ["", "No", 1]
+                        {
+                            nextStep: "step_0_1",
+                            label: "Yes",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "mainMenu",
+                            label: "No",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -294,8 +395,16 @@ export const steps = [
                     ],
         call_to_action: "Do you...",
         decisions:  [
-                        ["step_3_1", "Climb a tree to reach service?", 1],
-                        ["step_3_2", "Follow the path into the woods?", 1]
+                        {
+                            nextStep: "step_3_1",
+                            label: "Climb a tree to reach service?",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "step_3_2",
+                            label: "Follow the path into the woods?",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -320,8 +429,16 @@ export const steps = [
                     ],
         call_to_action: "Do you try again?",
         decisions:  [
-                        ["step_0_1", "Yes", 1],
-                        ["", "No", 1]
+                        {
+                            nextStep: "step_0_1",
+                            label: "Yes",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "mainMenu",
+                            label: "No",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -348,8 +465,16 @@ export const steps = [
                     ],
         call_to_action: "Do you try again?",
         decisions:  [
-                        ["step_0_1", "Yes", 1],
-                        ["", "No", 1]
+                        {
+                            nextStep: "step_0_1",
+                            label: "Yes",
+                            hidden: false
+                        },
+                        {
+                            nextStep: "mainMenu",
+                            label: "No",
+                            hidden: false
+                        }
                     ],
         choiceType: "button",
         unlockStory: {
@@ -368,7 +493,11 @@ export const steps = [
     //                 ],
     //     call_to_action: "",
     //     decisions:  [
-    //                     []
+    //                     {
+    //                         nextStep: "",
+    //                         label: "",
+    //                         hidden: false
+    //                     }
     //                 ],
     //     choiceType: "",
     //     unlockStory: {
