@@ -84,7 +84,7 @@ p {
     font-family: Yuyu;
 }
 /* All button fonts will be Shadows Into Light, without a border or a background. */
-button {
+button, input {
     border: none;
     background: none;
     font-family: "Shadows Into Light";
@@ -111,11 +111,41 @@ button {
     font-size: 30px;
     text-transform: uppercase;
 }
+/* If the decision is made by button. */
 #step-decisions > button:hover {
     background-color: #172C0D;
 }
 #step-decisions > button:active {
     color: #BBE9A7;
+}
+/* If the decision is made by text input. */
+#step-decisions div {
+    padding: 3px;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: #7BAB66;
+    border-radius: 3px;
+}
+#step-decisions div input {
+    width: 100%;
+    font-size: 30px;
+    border: none;
+    color: #050F00;
+    background: none;
+}
+#step-decisions div button img {
+    width: max-content;
+    height: 100%;
+    /* This changes the black logo into Evergreen: #172C0D */
+    filter: invert(13%) sepia(35%) saturate(1476%) hue-rotate(54deg) brightness(97%) contrast(97%);
+}
+#step-decisions div button img:hover {
+    /* This changes the title "B" image into Olive Leaf: #2A5217. */
+    filter: invert(27%) sepia(19%) saturate(2250%) hue-rotate(58deg) brightness(93%) contrast(93%);
+}
+#step-decisions div button:active {
+    filter: invert(20%);
 }
 
 

@@ -1,0 +1,73 @@
+<!--
+
+This will be the implementation of my text adventure python game from Intro to Programming - Spring 2025.
+Each page will be loaded in dynamically from the javascript file into a blank div in the body of the DOM.
+
+The first page will be the main menu. This page will be unique in the fact that it will have
+little to nothing in the header and footer of the body.
+
+Most of all the other pages will be the steps in the adventure. Each step in the adventure will be
+made up of the following:
+    1.  An image of the setting in which the step resides in.
+    2.  Options of decisions in which to proceed with the adventure.
+    3.  If applicable, hidden or unavailable options that would become visible or available
+        if the user finds something specific in another step of the adventure.
+
+Each page will have a navigation menu in the header. The navigation menu will include the following:
+    1. Main Menu
+    2. Credits
+    3. Home Page
+
+The credits will be an exitable pop-up module where I credit not only myself, but also my teachers and TAs.
+Just like the main menu, this page will have little to nothing in the header and footer of the div in the body.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta title="description" content="">
+    <meta title="author" content="Merrell, Joshua">
+    <link href="../index.css" rel="stylesheet">
+    <script type="module" src="../js/demo.js" defer></script>
+    <title>Brave The Darkness</title>
+</head>
+<body>
+    <div id="content">
+        <header>
+            <a href="#" id="logo">
+                <img src="../assets/logo/logo_small.png">
+            </a>
+            <div>
+                <button id="nav-icon">≡</button>
+                <nav id="mobile-nav" class="hidden">
+                    <button>Main Menu</button>
+                    <button>Credits</button>
+                    <button href="../index.html">Home Page</button>
+                </nav>
+                <nav id="non-mobile-nav">
+                    <button>Pause Game</button>
+                    <button href="../index.html">Home Page</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <img id="step-image" src="../assets/setting_images/step_1_demo.jpg" alt="Image of a clearing in the woods.">
+            <h1 id="step-title">The Woods</h1>
+            <p id="step-narration">You can't just stand around and do nothing. You need to find your way out. With nowhere else to go, you walk into the woods. You soon find a path, and after a few hours, you find youself at a crossroads. There is an old, worn sign with trailnames listed on it, and the path forks into multiple trails. The trailnames you can read are as follows: EVERGREEN CITY TRAIL, and GRIZZLY CAMP TRAIL.</p>
+            <div id="step-decisions">
+                <p>Which trail do you go down?</p>
+                <div>
+                    <input type="text">
+                    <button><img src="../assets/logo/logo_small.png"></button>
+                </div>
+            </div>
+        </main>
+        <!-- <footer>
+            <p>© 2026 - Merrell, Joshua</p>
+        </footer> -->
+    </div>
+</body>
+</html>
