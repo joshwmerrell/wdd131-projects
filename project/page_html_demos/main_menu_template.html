@@ -1,0 +1,57 @@
+<!--
+
+This will be the implementation of my text adventure python game from Intro to Programming - Spring 2025.
+Each page will be loaded in dynamically from the javascript file into a blank div in the body of the DOM.
+
+The first page will be the main menu. This page will be unique in the fact that it will have
+little to nothing in the header and footer of the body.
+
+Most of all the other pages will be the steps in the adventure. Each step in the adventure will be
+made up of the following:
+    1.  An image of the setting in which the step resides in.
+    2.  Options of decisions in which to proceed with the adventure.
+    3.  If applicable, hidden or unavailable options that would become visible or available
+        if the user finds something specific in another step of the adventure.
+
+Each page will have a navigation menu in the header. The navigation menu will include the following:
+    1. Main Menu
+    2. Credits
+    3. Home Page
+
+The credits will be an exitable pop-up module where I credit not only myself, but also my teachers and TAs.
+Just like the main menu, this page will have little to nothing in the header and footer of the div in the body.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta title="description" content="">
+    <meta title="author" content="Merrell, Joshua">
+    <link href="../index.css" rel="stylesheet">
+    <script type="module" src="../js/index.js" defer></script>
+    <title>Brave The Darkness</title>
+</head>
+<body>
+    <div id="content">
+        <main id="mainmenu">
+            <div id="mainmenu-title">
+                <img src="../assets/logo/logo_small.png">
+                <div>
+                    <h1>rave</h1>
+                    <h1 class="fullword">The</h1>
+                    <h1 class="fullword">Darkness</h1>
+                </div>
+            </div>
+            <h2 id="mainmenu-intro">You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness?</h2>
+            <button class="mainmenu-button">&emsp;&emsp;Brave&emsp;&emsp;</button>
+            <button class="mainmenu-button">&emsp;&emsp;Flee&emsp;&emsp;</button>
+        </main>
+        <!-- <footer>
+            <p>© 2026 - Merrell, Joshua</p>
+        </footer> -->
+    </div>
+</body>
+</html>

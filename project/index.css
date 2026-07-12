@@ -119,6 +119,52 @@ button {
 }
 
 
+/* Styles for the Main Menu, both mobile and desktop. May change in the future. */
+#mainmenu {
+    margin-top: 10%;
+    max-width: 1000px;
+    align-self: center;
+    justify-items: center;
+}
+#mainmenu-title {
+    width: max-content;
+    height: 20%;
+    display: flex;
+    text-align: left;
+}
+#mainmenu-title img {
+    margin-right: -10px;
+    max-height: 200px;
+    /* This changes the title "B" image into Olive Leaf: #2A5217. */
+    filter: invert(27%) sepia(19%) saturate(2250%) hue-rotate(58deg) brightness(93%) contrast(93%);
+}
+#mainmenu-title div {
+    height: 100%;
+}
+#mainmenu-title div h1 {
+    margin: 0;
+    font-size: 50px;
+    color: #2A5217;
+}
+#mainmenu-title div h1.fullword {
+    margin-left: 13px;
+}
+#mainmenu-intro {
+    text-align: center;
+    font-size: 40px;
+}
+button.mainmenu-button {
+    width: max-content;
+    font-size: 60px;
+}
+button.mainmenu-button:hover {
+    background-color: #172C0D;
+}
+button.mainmenu-button:active {
+    color: #BBE9A7;
+}
+
+
 /* Styles for steps in mobile display, which is any display width up to 600px. */
 
 /* Hidden class, mainly used for navigation. */
