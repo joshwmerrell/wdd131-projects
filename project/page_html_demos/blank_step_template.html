@@ -16,11 +16,10 @@ made up of the following:
     3.  If applicable, hidden or unavailable options that would become visible or available
         if the user finds something specific in another step of the adventure.
 
-Each page will have the option to pause. This option will be found in the header. When paused,
-there will be a translucent box that appears with options that would include the following:
-    1.  Resume Game
-    2.  Exit Game
-    3.  Credits
+Each page will have a navigation menu in the header. The navigation menu will include the following:
+    1. Main Menu
+    2. Credits
+    3. Home Page
 
 Optionally, the game may include a map of decisions that took the user to where they are in
 the game. This will be called "Memory". This would pop up in a translucent box as well.
@@ -34,26 +33,43 @@ the game. This will be called "Memory". This would pop up in a translucent box a
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta title="description" content="">
     <meta title="author" content="Merrell, Joshua">
-    <link href="../styles.css" rel="stylesheet">
-    <script src="../script.js" defer></script>
+    <link href="../index.css" rel="stylesheet">
+    <script type="module" src="../js/index.js" defer></script>
     <title>Brave The Darkness</title>
 </head>
 <body>
     <div id="content">
         <header>
-            <div id="logo">
-                <img src="">
+            <a href="#" id="logo">
+                <img src="../assets/logo/logo_small.png">
+            </a>
+            <div>
+                <button id="nav-icon">≡</button>
+                <nav id="mobile-nav" class="hidden">
+                    <button>Main Menu</button>
+                    <button>Credits</button>
+                    <button href="../index.html">Home Page</button>
+                </nav>
+                <nav id="non-mobile-nav">
+                    <button>Pause Game</button>
+                    <button href="../index.html">Home Page</button>
+                </nav>
             </div>
-            <button id="nav-icon">=</button>
-            <nav class="hidden">
-                <button>Pause Game</button>
-                <button href="../index.html">Home Page</button>
-            </nav>
         </header>
-        <main></main>
-        <footer>
+        <main>
+            <img id="step-image" src="../assets/setting_images/step_0_demo.jpg" alt="Image of the step's setting.">
+            <h1 id="step-name">The Step's Title</h1>
+            <p id="step-narration">This is the step's narration. It is really descriptive.</p>
+            <div id="step-decisions">
+                <p>Do you...</p>
+                <button>Decision 1?</button>
+                <button>Decision 2?</button>
+                <button>Decision 3?</button>
+            </div>
+        </main>
+        <!-- <footer>
             <p>© 2026 - Merrell, Joshua</p>
-        </footer>
+        </footer> -->
     </div>
 </body>
 </html>

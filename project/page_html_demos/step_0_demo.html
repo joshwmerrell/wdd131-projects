@@ -33,12 +33,43 @@ the game. This will be called "Memory". This would pop up in a translucent box a
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta title="description" content="">
     <meta title="author" content="Merrell, Joshua">
-    <link href="index.css" rel="stylesheet">
-    <script src="index.js" defer></script>
+    <link href="../index.css" rel="stylesheet">
+    <script type="module" src="../js/index.js" defer></script>
     <title>Brave The Darkness</title>
 </head>
 <body>
     <div id="content">
+        <header>
+            <a href="#" id="logo">
+                <img src="../assets/logo/logo_small.png">
+            </a>
+            <div>
+                <button id="nav-icon">≡</button>
+                <nav id="mobile-nav" class="hidden">
+                    <button>Main Menu</button>
+                    <button>Credits</button>
+                    <button href="../index.html">Home Page</button>
+                </nav>
+                <nav id="non-mobile-nav">
+                    <button>Pause Game</button>
+                    <button href="../index.html">Home Page</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <img id="step-image" src="../assets/setting_images/step_0_demo.jpg" alt="Image of a clearing in the woods.">
+            <h1 id="step-name">The Beginning</h1>
+            <p id="step-narration">You are lost and alone in the woods. You have no memory of how or why you are here. You are standing in a clearing with nothing but the clothes on your back and a cell phone in your pocket. Your phone is low on battery and you have no idea where you are.</p>
+            <div id="step-decisions">
+                <p>Do you...</p>
+                <button>DO NOTHING AND WAIT FOR SOMEONE TO FIND YOU?</button>
+                <button>TRY TO CALL SOMEONE?</button>
+                <button>WALK INTO THE WOODS TO FIND A WAY OUT?</button>
+            </div>
+        </main>
+        <!-- <footer>
+            <p>© 2026 - Merrell, Joshua</p>
+        </footer> -->
     </div>
 </body>
 </html>
