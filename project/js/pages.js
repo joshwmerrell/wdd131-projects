@@ -1,7 +1,11 @@
 // Pages
 
 export const mainMenu = {
-                            title: "Brave The Darkness",
+                            title:  {
+                                        imageSrc: "assets/logo/logo_small.png",
+                                        imageAlt: "B",
+                                        words: ["rave", "The", "Darkness"]
+                                    },
                             introduction: "You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness?",
                             decisions:  [
                                             {
@@ -14,9 +18,10 @@ export const mainMenu = {
                                             }
                                         ],
                             background: {
-                                            defaultColor: "#050F00",
-                                            imageSrc: "",
-                                            imageAlt: ""
+                                            defaultColor: "#050F00"
+                                            // Will come up with a way to incorporate a background image later.
+                                            // imageSrc: "",
+                                            // imageAlt: ""
                                         }
                         };
 
@@ -27,6 +32,7 @@ export const steps = [
     //                      narration: [string...],
     //                      call_to_action: string (most typically "Do you..."),
     //                      decisions:  [
+    //                                      (Updated this to be an array of objects insstead of an array of arrays.)
     //                                      [step.id, decision_label_or_description, number (1 for visible or 0 for hidden)]...
     //                                  ],
     //                      choiceType: string (either "button" or "textInput"),
