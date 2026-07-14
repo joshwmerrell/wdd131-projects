@@ -1,29 +1,38 @@
 // Pages
 
+export const credits =  {
+    title: "Credits",
+    paragraphs: [
+        "Joshua Merrell is the Author, Creator, and Proprietor of this game.",
+        "This small piece of the internet is the final project for his Spring 2026 WDD131 class at BYU-Idaho, Idaho.",
+        "He would like to thank his teacher, James Warner, and the TA, Joshua Walker. They did a good job teaching the class this year."
+    ]
+};
+
 export const mainMenu = {
-                            title:  {
-                                        imageSrc: "assets/logo/logo_small.png",
-                                        imageAlt: "B",
-                                        words: ["rave", "The", "Darkness"]
-                                    },
-                            introduction: "You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness? (Do know that the flee button closes the game.)",
-                            decisions:  [
-                                            {
-                                                nextStep: "step_0",
-                                                label: "Brave"
-                                            },
-                                            {
-                                                nextStep: "exit",
-                                                label: "Flee"
-                                            }
-                                        ],
-                            background: {
-                                            defaultColor: "#050F00"
-                                            // Will come up with a way to incorporate a background image later.
-                                            // imageSrc: "",
-                                            // imageAlt: ""
-                                        }
-                        };
+    title:  {
+        imageSrc: "assets/logo/logo_small.png",
+        imageAlt: "B",
+        words: ["rave", "The", "Darkness"]
+    },
+    introduction: "You will be placed in a predicament that requries one to face the abyss and find a way out of the wilderness. Will you brave the darkness? (Do know that the flee button closes the game.)",
+    decisions:  [
+        {
+            nextStep: "step_0",
+            label: "Brave"
+        },
+        {
+            nextStep: "exit",
+            label: "Flee"
+        }
+    ],
+    background: {
+        defaultColor: "#050F00"
+        // Will come up with a way to incorporate a background image later.
+        // imageSrc: "",
+        // imageAlt: ""
+    }
+};
 
 export const steps = [
     // object makup:    {
@@ -156,7 +165,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of a path in the woods with a sign."
     },
     // step_1_1, ending_0: Sunset Mountain
     // You notice another trail leading away. It looks smaller and less conspicuous, but there is just something that feels right about it. You hike this one.
@@ -192,7 +201,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of a mountain surrounded by shadows."
     },
     {
         id: "step_1_1_0",
@@ -250,7 +259,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of an abandonded villiage in the woods."
     },
     // step_1_3, ending_2: Grizzly Camp
     // It seems that one of the trails lead to a camp. If there are people there, you will be found! You head up Grizzly Camp Trail. The trail seems to be heading up hill. If you don't find people, you might get high enough to reach cell service! As the shadows stretch and the light fades, you feel like something is following you. Your pace quickens. You end up jogging, then running. You don't hear or see it, but you feel it hunting you and it feels like its getting closer. You soon reach a clearing full of fallen tents and strewn supplies. You've found camp, but it's abandonded. There's no one here and whatever did this is now after you! You hear it: sounds of racing footsteps and gravelly breathing. It's almost on top of you! Your phone has service; You scramble to make a call, but your phone dies in your hands. It's over.
@@ -285,7 +294,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of desesecrated camp."
     },
     // step_2: It's Getting Late
     // You have no idea where you are or where to go. You stay where you are and wait for help to arrive. You take a nap to kill time. When you awake, the sky is darker and night is apporaching. You get up, your phone is dead, and you notice animal tracks leading into the woods.
@@ -318,7 +327,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of the clearing in the evening."
     },
     // step_2_1, ending_3
     // Following animal tracks are better than doing nothing. You leave the clearing and follow them. You walk until it gets too dark to follow the tracks. The nocturnal woods come to life all around you. Finding yourself in a strage world full of sounds and noises, night has fallen and you are still lost. You try to make your way back. You will do so in vain. At some point, the woods fall silent and you feel a deep dread. You feel a million invisible eyes against the back of your head. Everywhere you turn, the void stares back at you. There is something out there. You can feel it. Standing still, the darkness around you seems to get darker and darker. You run as fast and as far as you can. You trip on something and everything around you flees into the void. You are alone in a dark and unfamiliar world. You will never be heard from again.
@@ -352,7 +361,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of a dark and haunted wood."
     },
     // step_2_2, ending_4
     // You will be spending the night in the woods. You will need a shelter to protect yourself. You scramble to find material, but without any tools, it's impossible to build one before nightfall. Darkness settles in and you are left with just yourself and a pile of sticks. No shelter. You sit down in the middle of the clearing and accept your situation. It gets cold and you can't sleep. After a while, you hear things. It's subtle at first and it takes a moment to notice. You hear footsteps in the woods. They get close, but stop at the edge of the tree line and circle the clearing. There are voices and heavy breathing. Whoever or whatever is out there is waiting for something. Out of the void, a wave of exhaustion hits you. Panicing, you fight it but you do so in vain. Exhaustion overpowers you. As your eyes close, you hear them close in on you. You will not be waking up.
@@ -386,7 +395,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of the clearing in the night."
     },
     // step_3: Make a Call
     // You go ahead and try to call someone, but you are out of cell service range. You are stuck for now. You walk around and notice that some of the trees beyond the clearing are taller than the rest. You also find a path at the edge of the clearing that leads away from the tall trees.
@@ -419,7 +428,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of tall trees."
     },
     // step_3_1, ending_5
     // If you are high enough up, your phone will be within range of cell service and you will be able to call someone. You leave the clearing and locate a very wide and tall tree. With much difficulty, you ascend it. Eventually, you reach a spot to rest. Your phone is still not within range so you climb higher. The branches get smaller and weaker. You reach the highest elevation you can without falling. You are now high enough to make a call. You go to do so and you move your phone near your head. It immediately slips from your hand. You watch as your only hope plummets to the forest floor. You are very high up. You attempt to decend, but you are stuck! You stay in that tree and night falls. You are exhausted and weak. The distant song of frogs and crickets tempts your sore limbs. You have no where else to go. You close your eyes and let go. You wondered if your phone called out. You wondered if it reached someone. You will never know. All the reaching branches below you fail to catch you as you fall into a sleep you will never wake up from.
@@ -453,7 +462,7 @@ export const steps = [
                         decision: ""
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of the tree tops with one very tall tree."
     },
     // step_3_2, ending_6
     // You have to get out of here. You have no tools, no direction and no idea how or why you are here. You walk the path into the woods. There are many branching trails and signs, but they are of no use to you. Each sign labels a different trail and doesn't give any hint if it leads out of the woods or to safety. Many hours pass. The shadows shrink and grow as you walk aimlessly through the woods. It is only when the sky darkens that you see the trail open up and reveal a clearing with something in the center. There's a collapsed tent and a cold firepit. The tent is shredded and torn, and ash from the firepit is strewn everywhere. It is a desecrated campsite with no other person or animal around. There is a notebook inside what was once a tent. Written inside is the story of a lost person trying to find 'SUNSET MOUNTAIN TRAIL'. This person was escaping something. Observing the campsite, it seems that whatever was chasing the poor soul caught up with them. Dread fills the air. Night arrives and you feel the darkness bring an evil presence.
@@ -489,7 +498,7 @@ export const steps = [
                         decision: "step_1_1"
                     },
         imageSrc: "",
-        imageAlt: ""
+        imageAlt: "Image of a destroyed camp site."
     }
     // {
     //     id: "",

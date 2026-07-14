@@ -119,7 +119,7 @@ button, input {
     color: #BBE9A7;
 }
 /* If the decision is made by text input. */
-#step-decisions div {
+#step-decisions > div {
     padding: 3px;
     height: 50px;
     width: 100%;
@@ -127,25 +127,46 @@ button, input {
     background-color: #7BAB66;
     border-radius: 3px;
 }
-#step-decisions div input {
+#step-decisions > div input {
     width: 100%;
     font-size: 30px;
     border: none;
     color: #050F00;
     background: none;
 }
-#step-decisions div button img {
+#step-decisions > div button img {
     width: max-content;
     height: 100%;
     /* This changes the black logo into Evergreen: #172C0D */
     filter: invert(13%) sepia(35%) saturate(1476%) hue-rotate(54deg) brightness(97%) contrast(97%);
 }
-#step-decisions div button img:hover {
+#step-decisions > div button img:hover {
     /* This changes the title "B" image into Olive Leaf: #2A5217. */
     filter: invert(27%) sepia(19%) saturate(2250%) hue-rotate(58deg) brightness(93%) contrast(93%);
 }
-#step-decisions div button:active {
+#step-decisions > div button:active {
     filter: invert(20%);
+}
+/* The styles for the credits dialog. */
+dialog {
+    max-width: 400px;
+    background-color: #7BAB66;
+}
+dialog h2 {
+    font-size: 50px;
+    color: #172C0D;
+}
+dialog p {
+    font-size: 25px;
+    color: #050F00;
+}
+.close-dialog {
+    position: absolute;
+    top: 0.1vh;
+    right: 0.2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+    color: white;
 }
 
 
