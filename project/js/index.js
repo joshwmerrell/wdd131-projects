@@ -1,3 +1,4 @@
+// Page data.
 import { mainMenu } from "./pages.js";
 import { steps } from "./pages.js";
 import { credits } from "./pages.js";
@@ -12,31 +13,45 @@ function closeGame() {
     window.open('', '_self').close();
 }
 
+
 // Script for main menu.
 
 // Upon open and when navigating back to, load in the main menu page.
 function openMainMenu() {
     // The main menu content is made up of the title, intro, and buttons.
+
     // The title is made up of an image and 3 words.
     const titleImage =  `<img src="${mainMenu.title.imageSrc}" alt="${mainMenu.title.imageAlt}">`;
     const titleWords =  `
-                        <div>
-                            <h1>${mainMenu.title.words[0]}</h1>
-                            <h1 class="fullword">${mainMenu.title.words[1]}</h1>
-                            <h1 class="fullword">${mainMenu.title.words[2]}</h1>
-                        </div>
-                        `;
-    const title = `<div id="mainmenu-title">` + titleImage + titleWords + `</div>`;
+        <div>
+            <h1>${mainMenu.title.words[0]}</h1>
+            <h1 class="fullword">${mainMenu.title.words[1]}</h1>
+            <h1 class="fullword">${mainMenu.title.words[2]}</h1>
+        </div>`;
+    const title = `
+        <div id="mainmenu-title">` +
+            titleImage +
+            titleWords +
+        `</div>`;
     // The intro.
     const intro = `<p id="mainmenu-intro">${mainMenu.introduction}</p>`;
     // The buttons.
     const buttons = `<section id="mainmenu-buttons">` + mainMenu.decisions.reduce((buttons, decision) => {return buttons + `<button value="${decision.nextStep}">&emsp;&emsp;${decision.label}&emsp;&emsp;</button>`}, ``) + `</section>`;
+
     // The main menu content.
-    const mainMenuContent = `<main id="mainmenu">` + title + intro + buttons + `</main>`;
+    const mainMenuContent = `
+        <main id="mainmenu">` +
+            title +
+            intro +
+            buttons +
+        `</main>`;
+    
     // Set page as main menu.
     pageContent.innerHTML = mainMenuContent;
-    // Set dynamic elements of the page that require an event listener.
+
+    // Define dynamic elements of the page that require an event listener.
     const mainMenuButtons = document.querySelector("#mainmenu-buttons");
+    
     // Event listener for the main menu button presses.
     mainMenuButtons.addEventListener("click", event => {
         // Open the beginning step when press "Brave" and close the game when press "Flee".
@@ -54,20 +69,22 @@ function openMainMenu() {
 openMainMenu();
 
 
-
 // Script for steps.
 
 // Upon making a decision, update the content of the page with the next step.
 function openStep(stepId) {
-    // Find the next step oject with the step id.
+    // Find the next step object with the step id.
     const nextStep = steps.find(step => step.id === stepId);
+
     // If the step unlocks a story path, update the specified decision object from hidden to not hidden.
     if (nextStep.unlockStory.unlock) {
         const targetStep = nextStep.unlockStory.step;
         const targetDecision = nextStep.unlockStory.decision;
         steps.find(step => step.id === targetStep).decisions.find(decision => decision.nextStep === targetDecision).hidden = false;
     }
-    // The step's page content is made up of the header, main, and credits dialog. 
+
+    // The step's page content is made up of the header, main, and credits dialog.
+
     // The header.
     const header = `
         <header>
@@ -88,6 +105,7 @@ function openStep(stepId) {
                 </nav>
             </div>
         </header>`;
+    
     // The main is made up of the image, title, narration, and the decisions w/ a call to action.
     // The image.
     const image = `<img id="step-image" src="${nextStep.imageSrc}" alt="${nextStep.imageAlt}"></img>`;
@@ -117,6 +135,7 @@ function openStep(stepId) {
                 </div>
             </div>`;
     }
+    
     // The main.
     const main = `
         <main>` +
@@ -132,11 +151,13 @@ function openStep(stepId) {
             credits.paragraphs.reduce((paragraphs, string) => {return paragraphs + `<p>${string}</p>`}, ``) +
             `<button class="close-dialog">X</button>` +
         `</dialog>`;
+
     // The step page content.
     const stepPageContent = header + main + creditsDialog;
     // Set page to step page.
     pageContent.innerHTML = stepPageContent;
-    // Set dynamic elements of the page that require an event listener.
+
+    // Define dynamic elements of the page that require an event listener.
     const navIcon = document.querySelector("#nav-icon");
     const mobileNav = document.querySelector("#mobile-nav");
     const nonMobileNav = document.querySelector("#non-mobile-nav");
@@ -144,6 +165,7 @@ function openStep(stepId) {
     const creditsModalExitButton = document.querySelector("dialog .close-dialog");
     const stepDecisions = document.querySelector("#step-decisions");
     const decisionTextBox = document.querySelector("#step-decisions div input");
+
     // Event listener to display or hide step nav in mobile format.
     navIcon.addEventListener("click", () => {
         mobileNav.classList.toggle("hidden");
@@ -170,7 +192,6 @@ function openStep(stepId) {
     creditsModalExitButton.addEventListener("click", () => {
         creditsModal.close();
     });
-
     // Event listeners to proceed to the next step.
     stepDecisions.addEventListener("click", event => {
         const buttonToStep = event.target.nodeName === "BUTTON" && event.target.value !== "mainMenu";

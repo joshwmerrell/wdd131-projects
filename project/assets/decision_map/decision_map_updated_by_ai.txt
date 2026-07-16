@@ -1,0 +1,111 @@
+Currently, there are 3 paths. Each step name will be made up of the word "step", a number representing the path and numbers following it representing the choice within that step.
+
+step_0: The Beginning
+    You wake up lost and alone in the woods, your mind a blank slate. You stand in a stark clearing with nothing but the clothes on your back. In your pocket, a cell phone glows weakly, its battery dying as fast as your memory of how you got here. Around you, the trees press close, and the air grows steadily colder.
+    Do you...
+    step_1: Walk into the woods to find a way out?
+    step_2: Do nothing and wait for someone to find you?
+    step_3: Try to call someone?
+
+step_0_1: The Clearing
+    You are back in the clearing, haunted by a vivid echo of your previous attempt. Something is deeply wrong. The air is heavier, the silence thicker, as if the world itself is losing its grip. You still have your phone, its battery still draining, and the same paths lie before you. Yet, a cold dread whispers that you are running out of time.
+    Do you...
+    step_1: Walk into the woods to find a way out?
+    step_2: Do nothing and wait for someone to find you?
+    step_3: Try to call someone?
+
+
+path_1
+
+step_1: The Woods
+    Staying doesn't feel wise; you have to find a way out. You plunge into the shadows of the trees and find a walking path. After what feels like hours of heavy, exhausting walking, you stumble onto a fork in the path. A weathered wooden sign stands rotting at the crossroads, listing two legible destinations: EVERGREEN CITY TRAIL and GRIZZLY CAMP TRAIL.
+    Which trail do you go down?
+    (The entry will be a text input)
+    step_1_1: Sunset Mountain Trail (hidden until encountered step_3_2)
+    step_1_2: Evergreen City Trail
+    step_1_3: Grizzly Camp Trail
+
+step_1_1, ending_0: Sunset Mountain
+    You notice another trail branching off. It is narrow and overgrown, yet an undeniable pull draws you toward it. You choose this path.
+    Though the sun is still up, a suffocating night feels close. As the trail steepens, the shadows beside you warp. They stretch, reaching toward your ankles. Panic spikes in your chest; you begin to leap over the dark patches, pick up your pace, and jog. But your foot clips a shadow—and you trip. Defying natural law, the shadow bends like solid matter under your weight. Every dark shape on the forest floor is now pointing directly at you. You run.
+    The sun sinks lower, feeding the darkness. It lunges. Behind you, branches snap, trees splinter, and the earth itself slides onto the trail in a relentless pursuit. After what feels like an eternity of running on failing legs, you burst onto a wide mountain overlook.
+    The path behind you is swallowed by blackness. It is sunset, and the abyss is closing in. You are trapped between the void and the sheer drop of the cliff. Is this the end?
+    Suddenly, your phone rings. The darkness shrieks and lunges. You press the phone to your ear just as a voice screams: "WAKE UP!"
+    (Next Page)
+    Your eyes snap open, heavy and burning. You gasp, drawing cold, real air into your lungs. You are lying in your own bed. It is night, and a little girl is beside you, frantically shaking your shoulder. "I thought you were dying!" she cries.
+    Your racing heart slows. Your shallow breathing finally settles. The nightmare is gone.
+
+    You are safe. You are found.
+
+step_1_2, ending_1: Evergreen City
+    You decide that civilization is your salvation. Evergreen City is exactly where you need to be. You follow the trail until the trees finally part, just as night begins to fall. A weathered wooden sign reads: EVERGREEN CITY. Relief washes over you, but it is brutally short-lived.
+    The path leads you not to a bustling city, but into an abandoned, overgrown ghost town. Rotting stone and wooden structures loom on either side of a silent dirt road. There is no life here, and your phone still has no service. Desperate for shelter and supplies as the darkness thickens, you flick on your phone’s flashlight to search the ruins.
+    Every building is empty, ransacked, and dead. Suddenly, your phone screen flickers and dies, plunging you into absolute blackness. Standing in the heart of the final decaying structure, a paralyzing dread grips your chest. A cold, dark presence is in the room with you—and it has been waiting. You turn to run, but the rotting floorboards disintegrate beneath your feet.
+    Trapped in the collapse, helpless and lost in the dark, you are swallowed by the night.
+    Do you try again?
+    step_0_1: Yes
+    end_game: No
+
+step_1_3, ending_2: Grizzly Camp
+    You reason that a camp must mean people, and people mean rescue. You head up the Grizzly Camp Trail. The path climbs steadily uphill; even if the camp is empty, the elevation might finally give you enough signal to call for help.
+    But as the shadows stretch and the daylight bleeds away, an icy sensation creeps up your spine. Something is behind you. Your pace quickens to a jog, then a desperate sprint. You can’t see or hear it, but you can feel it hunting you, closing the gap with terrifying speed.
+    You burst into a clearing littered with collapsed tents and torn supplies. You have found the camp, but it is a graveyard. There is no one here to save you, and whatever destroyed this place is now on your heels. Suddenly, you hear it: the sound of rushing footsteps and heavy, gravelly breathing echoing your own. It is right on top of you.
+    Your eyes dart to your phone—you have service! You scramble to dial, but the screen flickers black in your trembling hands. It’s over.
+    Out of the night's absolute void, a shape of pure, suffocating darkness lunges. You do not survive.
+    Do you try again?
+    step_0_1: Yes
+    end_game: No
+
+
+path_2
+
+step_2: It's Getting Late
+    Paralyzed by uncertainty, you decide to stay put and wait for rescue. To pass the time, you close your eyes and slip into a heavy, dreamless sleep.
+    When you finally wake, a freezing chill has settled over the clearing. The sky has bruised into a deep twilight, and the encroaching night is suffocatingly close. You push yourself up, your limbs feeling heavy and unresponsive. Your phone is completely dead. On the damp earth beside you, a fresh set of animal tracks leads deep into the shadows of the woods.
+    Do you...
+    step_2_1: Follow the animal tracks?
+    step_2_2: Make a shelter?
+
+step_2_1, ending_3: Enter the Abyss
+    Following the tracks is better than doing nothing. You leave the clearing behind and trail them deeper into the trees until the fading light fails you entirely. Around you, the nocturnal woods awaken with a cacophony of strange, unnatural sounds. Lost in this bizarre landscape, you decide to turn back—but your efforts are in vain.
+    Suddenly, a suffocating silence falls over the forest. A bone-deep dread paralyzes you. You feel the weight of a million invisible eyes boring into the back of your head. Everywhere you turn, the void stares back. There is something out there, closing in.
+    As you stand frozen, the blackness around you grows impossibly darker, pressing against your chest. You bolt, running blindly through the dark. You trip, and as you fall, the ground seems to vanish entirely. The world flees into the void, leaving you drifting in a silent, unfamiliar expanse. You will never be heard from again.
+    Do you try again?
+    step_0_1: Yes
+    end_game: No
+
+step_2_2, ending_4: They Watch, They Wait
+    You realize you will be spending the night in the woods. You desperately scramble to find building materials, but without tools, it is impossible to construct a shelter before nightfall. The darkness settles in, leaving you exposed, shivering, and clutching a useless pile of sticks.
+    Defeated, you sit in the center of the cold clearing and try to accept your situation. But sleep is impossible as the temperature plummets. After a while, you hear it—subtle at first, then unmistakable. Footsteps crunch in the dark. They stop at the very edge of the tree line, slowly circling the clearing. You hear whispering voices and a heavy, raspy breathing. Whatever is out there is waiting for something.
+    Suddenly, a massive, crushing wave of exhaustion hits you. You panic, fighting to keep your eyes open, but your protests are in vain. Your limbs turn to lead. As your eyelids slip shut, the sounds of the dark rush forward, closing in on you.
+    You will not be waking up.
+    step_0_1: Yes
+    end_game: No
+
+
+path_3
+
+step_3: Make a Call
+    You frantically dial for help, but there is no signal. You are completely cut off. Desperate, you scout the perimeter of the clearing. You notice a cluster of ancient trees towering far above the rest of the canopy, their high branches piercing the fading sky. Nearby, a narrow path winds away from them, disappearing into the dense forest.
+    Do you...
+    step_3_1: Climb a tree to reach service?
+    step_3_2: Follow the path into the woods?
+
+step_3_1, ending_5: The Fall
+    If you can climb high enough, you might find a signal and secure a lifeline. You approach a massive, towering tree and begin a grueling, agonizing climb. When you finally stop to rest, there is still no service. You force your trembling muscles to climb higher, even as the branches grow dangerously thin and brittle.
+    Finally, perched at the absolute limit of safety, your phone catches a bar of signal. You gasp, raising the screen to dial—but your sweat-slicked fingers slip. You watch in paralyzed horror as your only hope plummets, vanishing into the green abyss below.
+    Panic sets in, but when you look down, you realize you are stuck. High above the world, the cold night settles over you. You are weak, exhausted, and broken. Below, the rhythmic, distant chorus of crickets and frogs sings a hypnotic lullaby, tempting your sore, aching limbs to just stop fighting. With nowhere else to go, you close your eyes and let go of the bark.
+    As you fall, you wonder if your phone managed to dial on its way down. You wonder if your voice ever reached anyone. You will never know. The reaching branches below fail to catch you as you plunge into a deep, endless sleep.
+    Do you try again?
+    step_0_1: Yes
+    end_game: No
+
+step_3_2, ending_6: The Notebook
+    You have to get out of here. Armed with no tools, no direction, and no memories, you plunge down the path into the forest. You pass countless branching trails and weathered signs, but they are useless; each lists a random destination, offering no hint of safety.
+    Hours bleed away. The shadows stretch and warp as you wander aimlessly. Only when the sky turns a bruised, dark purple does the path finally spit you out into a clearing.
+    In the center lies a ruined campsite. A shredded tent stands collapsed near a cold, scattered firepit, its ashes strewn like gray snow. The place has been violently desecrated, yet there are no tracks of any person or animal. Crawling inside the torn nylon of the tent, you find a dirt-stained notebook.
+    The frantic handwriting inside tells the story of another lost soul desperately trying to find the 'SUNSET MOUNTAIN TRAIL' to escape something chasing them. Looking around the wreckage, it is painfully clear that whatever was hunting them eventually caught up.
+    A suffocating dread floods the clearing as night falls, and with the darkness comes a cold, malicious presence. It has found you. Your fate is sealed.
+    Do you try again?
+    step_0_1: Yes
+    end_game: No

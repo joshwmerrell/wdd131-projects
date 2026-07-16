@@ -35,493 +35,398 @@ export const mainMenu = {
 };
 
 export const steps = [
-    // object makup:    {
-    //                      id: string,
-    //                      title: string,
-    //                      narration: [string...],
-    //                      call_to_action: string (most typically "Do you..."),
-    //                      decisions:  [
-    //                                      (Updated this to be an array of objects insstead of an array of arrays.)
-    //                                      [step.id, decision_label_or_description, number (1 for visible or 0 for hidden)]...
-    //                                  ],
-    //                      choiceType: string (either "button" or "textInput"),
-    //                      imageSrc: string,
-    //                      imageAlt: string
-    //                  }
-    
-    // step_0: The Beginning
-    // You are lost and alone in the woods. You have no memory of how or why you are here. You are standing in a clearing with nothing but the clothes on your back and a cell phone in your pocket. Your phone is low on battery and you have no idea where you are.
-    //     Do you...
-    //     step_1: Walk into the woods to find a way out?
-    //     step_2: Do nothing and wait for someone to find you?
-    //     step_3: Try to call someone?
     {
         id: "step_0",
         title: "The Beginning",
-        narration:  [
-                        "You are lost and alone in the woods. You have no memory of how or why you are here. You are standing in a clearing with nothing but the clothes on your back and a cell phone in your pocket. Your phone is low on battery and you have no idea where you are."
-                    ],
+        narration: [
+            "You wake up lost and alone in the woods, your mind a blank slate. You stand in a stark clearing with nothing but the clothes on your back. In your pocket, a cell phone glows weakly, its battery dying as fast as your memory of how you got here. Around you, the trees press close, and the air grows steadily colder."
+        ],
         call_to_action: "Do you...",
-        decisions:  [
-                        {
-                            nextStep: "step_1",
-                            label: "Walk into the woods to find a way out?",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_2",
-                            label: "Do nothing and wait for someone to find you?",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_3",
-                            label: "Try to call someone?",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_1",
+                label: "Walk into the woods to find a way out?",
+                hidden: false
+            },
+            {
+                nextStep: "step_2",
+                label: "Do nothing and wait for someone to find you?",
+                hidden: false
+            },
+            {
+                nextStep: "step_3",
+                label: "Try to call someone?",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_0.png",
         imageAlt: "Image of a clearing in the woods."
     },
-    // step_0_1: The Clearing
-    // You are back in the clearing and you remember your previous journey. You take a look around and something feels off. You know being here is wrong, but it feels different. You can't tell what it is. You still have your phone and your options are still the same.
-    // Do you...
-    // step_1: Walk into the woods to find a way out?
-    // step_2: Do nothing and wait for someone to find you?
-    // step_3: Try to call someone?
     {
         id: "step_0_1",
         title: "The Clearing",
-        narration:  [
-                        "You are back in the clearing and you remember your previous journey. You take a look around and something feels off. You know being here is wrong, but it feels different. You can't tell what it is. You still have your phone and your options are still the same."
-                    ],
+        narration: [
+            "You are back in the clearing, haunted by a vivid echo of your previous attempt. Something is deeply wrong. The air is heavier, the silence thicker, as if the world itself is losing its grip. You still have your phone, its battery still draining, and the same paths lie before you. Yet, a cold dread whispers that you are running out of time."
+        ],
         call_to_action: "Do you...",
-        decisions:  [
-                        {
-                            nextStep: "step_1",
-                            label: "Walk into the woods to find a way out?",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_2",
-                            label: "Do nothing and wait for someone to find you?",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_3",
-                            label: "Try to call someone?",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_1",
+                label: "Walk into the woods to find a way out?",
+                hidden: false
+            },
+            {
+                nextStep: "step_2",
+                label: "Do nothing and wait for someone to find you?",
+                hidden: false
+            },
+            {
+                nextStep: "step_3",
+                label: "Try to call someone?",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_0_1.png",
         imageAlt: "Image of a clearing in the woods."
     },
-    // step_1: The Woods
-    // You can't just stand around and do nothing. You need to find your way out. With nowhere else to go, you walk into the woods. You soon find a path, and after a few hours, you find youself at a crossroads. There is an old, worn sign with trailnames listed on it, and the path forks into multiple trails. The trailnames you can read are as follows: EVERGREEN CITY TRAIL, and GRIZZLY CAMP TRAIL.
-    // Which trail do you go down?
-    // (The entry will be a text input)
-    // step_1_1: Sunset Mountain Trail (hidden until encountered step_3_2)
-    // step_1_2: Evergreen City Trail
-    // step_1_3: Grizzly Camp Trail
     {
         id: "step_1",
         title: "The Woods",
-        narration:  [
-                        "You can't just stand around and do nothing. You need to find your way out. With nowhere else to go, you walk into the woods. You soon find a path, and after a few hours, you find youself at a crossroads. There is an old, worn sign with trailnames listed on it, and the path forks into multiple trails. The trailnames you can read are as follows: EVERGREEN CITY TRAIL, and GRIZZLY CAMP TRAIL."
-                    ],
-        call_to_action: "Which trail do you go down?",
-        decisions:  [
-                        {
-                            nextStep: "step_1_1",
-                            label: "Sunset Mountain",
-                            hidden: true
-                        },
-                        {
-                            nextStep: "step_1_2",
-                            label: "Evergreen City",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_1_3",
-                            label: "Grizzly Camp",
-                            hidden: false
-                        }
-                    ],
+        narration: [
+            "Staying doesn't feel wise; you have to find a way out. You plunge into the shadows of the trees and find a walking path. After what feels like hours of heavy, exhausting walking, you stumble onto a fork in the path. A weathered wooden sign stands rotting at the crossroads, listing two legible destinations: EVERGREEN CITY TRAIL and GRIZZLY CAMP TRAIL."
+        ],
+        call_to_action: "Where do you go?",
+        decisions: [
+            {
+                nextStep: "step_1_1",
+                label: "Sunset Mountain",
+                hidden: true
+            },
+            {
+                nextStep: "step_1_2",
+                label: "Evergreen City",
+                hidden: false
+            },
+            {
+                nextStep: "step_1_3",
+                label: "Grizzly Camp",
+                hidden: false
+            }
+        ],
         choiceType: "textInput",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_1.png",
         imageAlt: "Image of a path in the woods with a sign."
     },
-    // step_1_1, ending_0: Sunset Mountain
-    // You notice another trail leading away. It looks smaller and less conspicuous, but there is just something that feels right about it. You hike this one.
-    // The day is still young, but you feel as if the night is close. As you progress, the trail gets steeper and the shadows beside the trail seem off. They look like they're reaching for you. You get nervous and start jumping over those on the trail. You jog. Accidentally stepping in a shadow, you trip over it. Defying natural law, it is bent. They're all pointed at you. You run.
-    // The sun lowers in the sky and the darkness gains strength. It reaches out and grabs at you. Branches break, trees fall and piles of earth slide onto the trail. It's relentless. Your journey feels like forever, but you reach a wide overlook against a mountain.
-    // The darkness has blocked the trail behind you. It's sunset and the darkness is closing in. You're trapped between a void and the sheer overlook drop. You're surrounded by the abyss. Is this it? Is it over?
-    // Your phone starts ringing. The darkness hears it and lunges at you. You pick up the phone and a voice yells 'WAKE UP!'....
-    // (next page)
-    // You open your groggy and fatigued eyes. You're lying in bed in your bedroom. It is night time and there is a little girl next to your bed shaking you. 'I though you were dying!' Your anxiety calms and your breathing settles. It is better now.
-    // You are safe. You are found.
     {
         id: "step_1_1",
         title: "Sunset Mountain",
-        narration:  [
-                        "You notice another trail leading away. It looks smaller and less conspicuous, but there is just something that feels right about it. You hike this one.",
-                        "The day is still young, but you feel as if the night is close. As you progress, the trail gets steeper and the shadows beside the trail seem off. They look like they're reaching for you. You get nervous and start jumping over those on the trail. You jog. Accidentally stepping in a shadow, you trip over it. Defying natural law, it is bent. They're all pointed at you. You run.",
-                        "The sun lowers in the sky and the darkness gains strength. It reaches out and grabs at you. Branches break, trees fall and piles of earth slide onto the trail. It's relentless. Your journey feels like forever, but you reach a wide overlook against a mountain.",
-                        "The darkness has blocked the trail behind you. It's sunset and the darkness is closing in. You're trapped between a void and the sheer overlook drop. You're surrounded by the abyss. Is this it? Is it over?",
-                        "Your phone starts ringing. The darkness hears it and lunges at you. You pick up the phone and a voice yells 'WAKE UP!'...."
-                    ],
+        narration: [
+            "You notice another trail branching off. It is narrow and overgrown, yet an undeniable pull draws you toward it. You choose this path.",
+            "Though the sun is still up, a suffocating night feels close. As the trail steepens, the shadows beside you warp. They stretch, reaching toward your ankles. Panic spikes in your chest; you begin to leap over the dark patches, pick up your pace, and jog. But your foot clips a shadow—and you trip. Defying natural law, the shadow bends like solid matter under your weight. Every dark shape on the forest floor is now pointing directly at you. You run.",
+            "The sun sinks lower, feeding the darkness. It lunges. Behind you, branches snap, trees splinter, and the earth itself slides onto the trail in a relentless pursuit. After what feels like an eternity of running on failing legs, you burst onto a wide mountain overlook.",
+            "The path behind you is swallowed by blackness. It is sunset, and the abyss is closing in. You are trapped between the void and the sheer drop of the cliff. Is this the end?",
+            "Suddenly, your phone rings. The darkness shrieks and lunges. You press the phone to your ear just as a voice screams: 'WAKE UP!'",
+        ],
         call_to_action: "",
-        decisions:  [
-                        {
-                            nextStep: "step_1_1_0",
-                            label: "Next Page",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_1_1_0",
+                label: "Next Page",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_1_1.png",
         imageAlt: "Image of a mountain surrounded by shadows."
     },
     {
         id: "step_1_1_0",
         title: "...",
-        narration:  [
-                        "You open your groggy and fatigued eyes. You're lying in bed in your bedroom. It is night time and there is a little girl next to your bed shaking you. 'I though you were dying!' Your anxiety calms and your breathing settles. It is better now.",
-                        "You are safe. You are found."
-                    ],
+        narration: [
+            "Your eyes snap open, heavy and burning. You gasp, drawing cold, real air into your lungs. You are lying in your own bed. It is night, and a little girl is beside you, frantically shaking your shoulder. 'I thought you were dying!' she cries.",
+            "Your racing heart slows. Your shallow breathing finally settles. The nightmare is gone."
+        ],
         call_to_action: "",
-        decisions:  [
-                        {
-                            nextStep: "",
-                            label: "",
-                            hidden: true
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "",
+                label: "",
+                hidden: true
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "",
         imageAlt: ""
     },
-    // step_1_2, ending_1: Evergreen City
-    // You determine civilization is where your salvation lies! Evergreen City sounds exactly where you need to be. You walk the trail until you reach an opening in the trees. Night is arriving. There's a wooden sign that reads 'EVERGREEN CITY'. You feel saved, but the feeling is short lived. The trail leads you into an abandonded and overgrown village. There is rotting, wooden, buildings on either side of a dirt road. There's no help to be found here and you still aren't within cell service range. You search through the old and decaying bulidings to seek shelter and supplies. Night has arrived so you have to use your cellphone's flashlight to navigate. The entire place is ransacked and empty. Your phone dies and you are all alone in the dark. You are in the last building and dread falls over you. A dark presence is here and it has been waiting. You run, but the decaying floor collapses below you. Stuck and lost, you become a victim to the darkness of the night.
-    // Do you try again?
-    // step_0_1: Yes
-    // end_game: No
     {
         id: "step_1_2",
         title: "Evergreen City",
-        narration:  [
-                        "You determine civilization is where your salvation lies! Evergreen City sounds exactly where you need to be. You walk the trail until you reach an opening in the trees. Night is arriving. There's a wooden sign that reads 'EVERGREEN CITY'. You feel saved, but the feeling is short lived. The trail leads you into an abandonded and overgrown village. There is rotting, wooden, buildings on either side of a dirt road. There's no help to be found here and you still aren't within cell service range.",
-                        "You search through the old and decaying bulidings to seek shelter and supplies. Night has arrived so you have to use your cellphone's flashlight to navigate. The entire place is ransacked and empty. Your phone dies and you are all alone in the dark. You are in the last building and dread falls over you. A dark presence is here and it has been waiting. You run, but the decaying floor collapses below you. Stuck and lost, you become a victim to the darkness of the night."
-                    ],
+        narration: [
+            "You decide that civilization is your salvation. Evergreen City is exactly where you need to be. You follow the trail until the trees finally part, just as night begins to fall. A weathered wooden sign reads: EVERGREEN CITY. Relief washes over you, but it is brutally short-lived.",
+            "The path leads you not to a bustling city, but into an abandoned, overgrown ghost town. Rotting stone and wooden structures loom on either side of a silent dirt road. There is no life here, and your phone still has no service. Desperate for shelter and supplies as the darkness thickens, you flick on your phone's flashlight to search the ruins.",
+            "Every building is empty, ransacked, and dead. Suddenly, your phone screen flickers and dies, plunging you into absolute blackness. Standing in the heart of the final decaying structure, a paralyzing dread grips your chest. A cold, dark presence is in the room with you—and it has been waiting. You turn to run, but the rotting floorboards disintegrate beneath your feet.",
+            "Trapped in the collapse, helpless and lost in the dark, you are swallowed by the night."
+        ],
         call_to_action: "Do you try again?",
-        decisions:  [
-                        {
-                            nextStep: "step_0_1",
-                            label: "Yes",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "mainMenu",
-                            label: "No",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_0_1",
+                label: "Yes",
+                hidden: false
+            },
+            {
+                nextStep: "mainMenu",
+                label: "No",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_1_2.png",
         imageAlt: "Image of an abandonded villiage in the woods."
     },
-    // step_1_3, ending_2: Grizzly Camp
-    // It seems that one of the trails lead to a camp. If there are people there, you will be found! You head up Grizzly Camp Trail. The trail seems to be heading up hill. If you don't find people, you might get high enough to reach cell service! As the shadows stretch and the light fades, you feel like something is following you. Your pace quickens. You end up jogging, then running. You don't hear or see it, but you feel it hunting you and it feels like its getting closer. You soon reach a clearing full of fallen tents and strewn supplies. You've found camp, but it's abandonded. There's no one here and whatever did this is now after you! You hear it: sounds of racing footsteps and gravelly breathing. It's almost on top of you! Your phone has service; You scramble to make a call, but your phone dies in your hands. It's over.
-    // From the trail, in the night's void you see a creature of pure darkness come at you. You do not survive.
-    // Do you try again?
-    // step_0_1: Yes
-    // end_game: No
     {
         id: "step_1_3",
         title: "Grizzly Camp",
-        narration:  [
-                       "It seems that one of the trails lead to a camp. If there are people there, you will be found! You head up Grizzly Camp Trail. The trail seems to be heading up hill. If you don't find people, you might get high enough to reach cell service! As the shadows stretch and the light fades, you feel like something is following you. Your pace quickens. You end up jogging, then running. You don't hear or see it, but you feel it hunting you and it feels like its getting closer.",
-                       "You soon reach a clearing full of fallen tents and strewn supplies. You've found camp, but it's abandonded. There's no one here and whatever did this is now after you! You hear it: sounds of racing footsteps and gravelly breathing. It's almost on top of you! Your phone has service; You scramble to make a call, but your phone dies in your hands. It's over." 
-                    ],
+        narration: [
+            "You reason that a camp must mean people, and people mean rescue. You head up the Grizzly Camp Trail. The path climbs steadily uphill; even if the camp is empty, the elevation might finally give you enough signal to call for help.",
+            "But as the shadows stretch and the daylight bleeds away, an icy sensation creeps up your spine. Something is behind you. Your pace quickens to a jog, then a desperate sprint. You can't see or hear it, but you can feel it hunting you, closing the gap with terrifying speed.",
+            "You burst into a clearing littered with collapsed tents and torn supplies. You have found the camp, but it is a graveyard. There is no one here to save you, and whatever destroyed this place is now on your heels. Suddenly, you hear it: the sound of rushing footsteps and heavy, gravelly breathing echoing your own. It is right on top of you.",
+            "Your eyes dart to your phone—you have service! You scramble to dial, but the screen flickers black in your trembling hands. It's over.",
+            "Out of the night's absolute void, a shape of pure, suffocating darkness lunges. You do not survive."
+        ],
         call_to_action: "Do you try again?",
-        decisions:  [
-                        {
-                            nextStep: "step_0_1",
-                            label: "Yes",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "mainMenu",
-                            label: "No",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_0_1",
+                label: "Yes",
+                hidden: false
+            },
+            {
+                nextStep: "mainMenu",
+                label: "No",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_1_3.png",
         imageAlt: "Image of desesecrated camp."
     },
-    // step_2: It's Getting Late
-    // You have no idea where you are or where to go. You stay where you are and wait for help to arrive. You take a nap to kill time. When you awake, the sky is darker and night is apporaching. You get up, your phone is dead, and you notice animal tracks leading into the woods.
-    // Do you...
-    // step_2_1: Follow the animal tracks?
-    // step_2_2: Make a shelter?
     {
         id: "step_2",
         title: "It's Getting Late",
-        narration:  [
-                        "You have no idea where you are or where to go. You stay where you are and wait for help to arrive. You take a nap to kill time. When you awake, the sky is darker and night is apporaching. You get up, your phone is dead, and you notice animal tracks leading into the woods."
-                    ],
+        narration: [
+            "Paralyzed by uncertainty, you decide to stay put and wait for rescue. To pass the time, you close your eyes and slip into a heavy, dreamless sleep.",
+            "When you finally wake, a freezing chill has settled over the clearing. The sky has bruised into a deep twilight, and the encroaching night is suffocatingly close. You push yourself up, your limbs feeling heavy and unresponsive. Your phone is completely dead. On the damp earth beside you, a fresh set of animal tracks leads deep into the shadows of the woods."
+        ],
         call_to_action: "Do you...",
-        decisions:  [
-                        {
-                            nextStep: "step_2_1",
-                            label: "Follow the animal tracks?",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_2_2",
-                            label: "Make a shelter?",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_2_1",
+                label: "Follow the animal tracks?",
+                hidden: false
+            },
+            {
+                nextStep: "step_2_2",
+                label: "Make a shelter?",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_2.png",
         imageAlt: "Image of the clearing in the evening."
     },
-    // step_2_1, ending_3
-    // Following animal tracks are better than doing nothing. You leave the clearing and follow them. You walk until it gets too dark to follow the tracks. The nocturnal woods come to life all around you. Finding yourself in a strage world full of sounds and noises, night has fallen and you are still lost. You try to make your way back. You will do so in vain. At some point, the woods fall silent and you feel a deep dread. You feel a million invisible eyes against the back of your head. Everywhere you turn, the void stares back at you. There is something out there. You can feel it. Standing still, the darkness around you seems to get darker and darker. You run as fast and as far as you can. You trip on something and everything around you flees into the void. You are alone in a dark and unfamiliar world. You will never be heard from again.
-    // Do you try again?
-    // step_0_1: Yes
-    // end_game: No
     {
         id: "step_2_1",
         title: "Enter the Abyss",
-        narration:  [
-                        "Following animal tracks are better than doing nothing. You leave the clearing and follow them. You walk until it gets too dark to follow the tracks. The nocturnal woods come to life all around you. Finding yourself in a strage world full of sounds and noises, night has fallen and you are still lost. You try to make your way back. You will do so in vain. At some point, the woods fall silent and you feel a deep dread.",
-                        "You feel a million invisible eyes against the back of your head. Everywhere you turn, the void stares back at you. There is something out there. You can feel it. Standing still, the darkness around you seems to get darker and darker. You run as fast and as far as you can. You trip on something and everything around you flees into the void. You are alone in a dark and unfamiliar world. You will never be heard from again."
-                    ],
+        narration: [
+            "Following the tracks is better than doing nothing. You leave the clearing behind and trail them deeper into the trees until the fading light fails you entirely. Around you, the nocturnal woods awaken with a cacophony of strange, unnatural sounds. Lost in this bizarre landscape, you decide to turn back—but your efforts are in vain.",
+            "Suddenly, a suffocating silence falls over the forest. A bone-deep dread paralyzes you. You feel the weight of a million invisible eyes boring into the back of your head. Everywhere you turn, the void stares back. There is something out there, closing in.",
+            "As you stand frozen, the blackness around you grows impossibly darker, pressing against your chest. You bolt, running blindly through the dark. You trip, and as you fall, the ground seems to vanish entirely. The world flees into the void, leaving you drifting in a silent, unfamiliar expanse. You will never be heard from again."
+        ],
         call_to_action: "Do you try again?",
-        decisions:  [
-                        {
-                            nextStep: "step_0_1",
-                            label: "Yes",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "mainMenu",
-                            label: "No",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_0_1",
+                label: "Yes",
+                hidden: false
+            },
+            {
+                nextStep: "mainMenu",
+                label: "No",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_2_1.png",
         imageAlt: "Image of a dark and haunted wood."
     },
-    // step_2_2, ending_4
-    // You will be spending the night in the woods. You will need a shelter to protect yourself. You scramble to find material, but without any tools, it's impossible to build one before nightfall. Darkness settles in and you are left with just yourself and a pile of sticks. No shelter. You sit down in the middle of the clearing and accept your situation. It gets cold and you can't sleep. After a while, you hear things. It's subtle at first and it takes a moment to notice. You hear footsteps in the woods. They get close, but stop at the edge of the tree line and circle the clearing. There are voices and heavy breathing. Whoever or whatever is out there is waiting for something. Out of the void, a wave of exhaustion hits you. Panicing, you fight it but you do so in vain. Exhaustion overpowers you. As your eyes close, you hear them close in on you. You will not be waking up.
-    // Do you try again?
-    // step_0_1: Yes
-    // end_game: No
     {
         id: "step_2_2",
         title: "They Watch, They Wait",
-        narration:  [
-                        "You will be spending the night in the woods. You will need a shelter to protect yourself. You scramble to find material, but without any tools, it's impossible to build one before nightfall. Darkness settles in and you are left with just yourself and a pile of sticks. No shelter. You sit down in the middle of the clearing and accept your situation. It gets cold and you can't sleep.",
-                        "After a while, you hear things. It's subtle at first and it takes a moment to notice. You hear footsteps in the woods. They get close, but stop at the edge of the tree line and circle the clearing. There are voices and heavy breathing. Whoever or whatever is out there is waiting for something. Out of the void, a wave of exhaustion hits you. Panicing, you fight it but you do so in vain. Exhaustion overpowers you. As your eyes close, you hear them close in on you. You will not be waking up."
-                    ],
+        narration: [
+            "You realize you will be spending the night in the woods. You desperately scramble to find building materials, but without tools, it is impossible to construct a shelter before nightfall. The darkness settles in, leaving you exposed, shivering, and clutching a useless pile of sticks.",
+            "Defeated, you sit in the center of the cold clearing and try to accept your situation. But sleep is impossible as the temperature plummets. After a while, you hear it—subtle at first, then unmistakable. Footsteps crunch in the dark. They stop at the very edge of the tree line, slowly circling the clearing. You hear whispering voices and a heavy, raspy breathing. Whatever is out there is waiting for something.",
+            "Suddenly, a massive, crushing wave of exhaustion hits you. You panic, fighting to keep your eyes open, but your protests are in vain. Your limbs turn to lead. As your eyelids slip shut, the sounds of the dark rush forward, closing in on you.",
+            "You will not be waking up."
+        ],
         call_to_action: "Do you try again?",
-        decisions:  [
-                        {
-                            nextStep: "step_0_1",
-                            label: "Yes",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "mainMenu",
-                            label: "No",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_0_1",
+                label: "Yes",
+                hidden: false
+            },
+            {
+                nextStep: "mainMenu",
+                label: "No",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_2_2.png",
         imageAlt: "Image of the clearing in the night."
     },
-    // step_3: Make a Call
-    // You go ahead and try to call someone, but you are out of cell service range. You are stuck for now. You walk around and notice that some of the trees beyond the clearing are taller than the rest. You also find a path at the edge of the clearing that leads away from the tall trees.
-    // Do you...
-    // step_3_1: Climb a tree to reach service?
-    // step_3_2: Follow the path into the woods?
     {
         id: "step_3",
         title: "Make a Call",
-        narration:  [
-                        "You go ahead and try to call someone, but you are out of cell service range. You are stuck for now. You walk around and notice that some of the trees beyond the clearing are taller than the rest. You also find a path at the edge of the clearing that leads away from the tall trees."
-                    ],
+        narration: [
+            "You frantically dial for help, but there is no signal. You are completely cut off. Desperate, you scout the perimeter of the clearing. You notice a cluster of ancient trees towering far above the rest of the canopy, their high branches piercing the fading sky. Nearby, a narrow path winds away from them, disappearing into the dense forest."
+        ],
         call_to_action: "Do you...",
-        decisions:  [
-                        {
-                            nextStep: "step_3_1",
-                            label: "Climb a tree to reach service?",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "step_3_2",
-                            label: "Follow the path into the woods?",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_3_1",
+                label: "Climb a tree to reach service?",
+                hidden: false
+            },
+            {
+                nextStep: "step_3_2",
+                label: "Follow the path into the woods?",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_3.png",
         imageAlt: "Image of path into trees."
     },
-    // step_3_1, ending_5
-    // If you are high enough up, your phone will be within range of cell service and you will be able to call someone. You leave the clearing and locate a very wide and tall tree. With much difficulty, you ascend it. Eventually, you reach a spot to rest. Your phone is still not within range so you climb higher. The branches get smaller and weaker. You reach the highest elevation you can without falling. You are now high enough to make a call. You go to do so and you move your phone near your head. It immediately slips from your hand. You watch as your only hope plummets to the forest floor. You are very high up. You attempt to decend, but you are stuck! You stay in that tree and night falls. You are exhausted and weak. The distant song of frogs and crickets tempts your sore limbs. You have no where else to go. You close your eyes and let go. You wondered if your phone called out. You wondered if it reached someone. You will never know. All the reaching branches below you fail to catch you as you fall into a sleep you will never wake up from.
-    // Do you try again?
-    // step_0_1: Yes
-    // end_game: No
     {
         id: "step_3_1",
         title: "The Fall",
-        narration:  [
-                        "If you are high enough up, your phone will be within range of cell service and you will be able to call someone. You leave the clearing and locate a very wide and tall tree. With much difficulty, you ascend it. Eventually, you reach a spot to rest. Your phone is still not within range so you climb higher. The branches get smaller and weaker. You reach the highest elevation you can without falling.",
-                        "You are now high enough to make a call. You go to do so and you move your phone near your head. It immediately slips from your hand. You watch as your only hope plummets to the forest floor. You are very high up. You attempt to decend, but you are stuck! You stay in that tree and night falls. You are exhausted and weak. The distant song of frogs and crickets tempts your sore limbs. You have no where else to go. You close your eyes and let go. You wondered if your phone called out. You wondered if it reached someone. You will never know. All the reaching branches below you fail to catch you as you fall into a sleep you will never wake up from."
-                    ],
+        narration: [
+            "If you can climb high enough, you might find a signal and secure a lifeline. You approach a massive, towering tree and begin a grueling, agonizing climb. When you finally stop to rest, there is still no service. You force your trembling muscles to climb higher, even as the branches grow dangerously thin and brittle.",
+            "Finally, perched at the absolute limit of safety, your phone catches a bar of signal. You gasp, raising the screen to dial—but your sweat-slicked fingers slip. You watch in paralyzed horror as your only hope plummets, vanishing into the green abyss below.",
+            "Panic sets in, but when you look down, you realize you are stuck. High above the world, the cold night settles over you. You are weak, exhausted, and broken. Below, the rhythmic, distant chorus of crickets and frogs sings a hypnotic lullaby, tempting your sore, aching limbs to just stop fighting. With nowhere else to go, you close your eyes and let go of the bark.",
+            "As you fall, you wonder if your phone managed to dial on its way down. You wonder if your voice ever reached anyone. You will never know. The reaching branches below fail to catch you as you plunge into a deep, endless sleep."
+        ],
         call_to_action: "Do you try again?",
-        decisions:  [
-                        {
-                            nextStep: "step_0_1",
-                            label: "Yes",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "mainMenu",
-                            label: "No",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_0_1",
+                label: "Yes",
+                hidden: false
+            },
+            {
+                nextStep: "mainMenu",
+                label: "No",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: false,
-                        step: "",
-                        decision: ""
-                    },
+            unlock: false,
+            step: "",
+            decision: ""
+        },
         imageSrc: "assets/setting_images/step_3_1.png",
         imageAlt: "Image of the tree tops with one very tall tree."
     },
-    // step_3_2, ending_6
-    // You have to get out of here. You have no tools, no direction and no idea how or why you are here. You walk the path into the woods. There are many branching trails and signs, but they are of no use to you. Each sign labels a different trail and doesn't give any hint if it leads out of the woods or to safety. Many hours pass. The shadows shrink and grow as you walk aimlessly through the woods. It is only when the sky darkens that you see the trail open up and reveal a clearing with something in the center. There's a collapsed tent and a cold firepit. The tent is shredded and torn, and ash from the firepit is strewn everywhere. It is a desecrated campsite with no other person or animal around. There is a notebook inside what was once a tent. Written inside is the story of a lost person trying to find 'SUNSET MOUNTAIN TRAIL'. This person was escaping something. Observing the campsite, it seems that whatever was chasing the poor soul caught up with them. Dread fills the air. Night arrives and you feel the darkness bring an evil presence.
-    // It is here. Your fate is sealed and there is no escaping it.
-    // Do you try again?
-    // step_0_1: Yes
-    // end_game: No
     {
         id: "step_3_2",
         title: "The Notebook",
-        narration:  [
-                        "You have to get out of here. You have no tools, no direction and no idea how or why you are here. You walk the path into the woods. There are many branching trails and signs, but they are of no use to you. Each sign labels a different trail and doesn't give any hint if it leads out of the woods or to safety. Many hours pass. The shadows shrink and grow as you walk aimlessly through the woods.",
-                        "It is only when the sky darkens that you see the trail open up and reveal a clearing with something in the center. There's a collapsed tent and a cold firepit. The tent is shredded and torn, and ash from the firepit is strewn everywhere. It is a desecrated campsite with no other person or animal around. There is a notebook inside what was once a tent. Written inside is the story of a lost person trying to find 'SUNSET MOUNTAIN TRAIL'. This person was escaping something. Observing the campsite, it seems that whatever was chasing the poor soul caught up with them. Dread fills the air. Night arrives and you feel the darkness bring an evil presence.",
-                        "It is here. Your fate is sealed and there is no escaping it."
-                    ],
+        narration: [
+            "You have to get out of here. Armed with no tools, no direction, and no memories, you plunge down the path into the forest. You pass countless branching trails and weathered signs, but they are useless; each lists a random destination, offering no hint of safety.",
+            "Hours bleed away. The shadows stretch and warp as you wander aimlessly. Only when the sky turns a bruised, dark purple does the path finally spit you out into a clearing.",
+            "In the center lies a ruined campsite. A shredded tent stands collapsed near a cold, scattered firepit, its ashes strewn like gray snow. The place has been violently desecrated, yet there are no tracks of any person or animal. Crawling inside the torn nylon of the tent, you find a dirt-stained notebook.",
+            "The frantic handwriting inside tells the story of another lost soul desperately trying to find the 'SUNSET MOUNTAIN TRAIL' to escape something chasing them. Looking around the wreckage, it is painfully clear that whatever was hunting them eventually caught up.",
+            "A suffocating dread floods the clearing as night falls, and with the darkness comes a cold, malicious presence. It has found you. Your fate is sealed."
+        ],
         call_to_action: "Do you try again?",
-        decisions:  [
-                        {
-                            nextStep: "step_0_1",
-                            label: "Yes",
-                            hidden: false
-                        },
-                        {
-                            nextStep: "mainMenu",
-                            label: "No",
-                            hidden: false
-                        }
-                    ],
+        decisions: [
+            {
+                nextStep: "step_0_1",
+                label: "Yes",
+                hidden: false
+            },
+            {
+                nextStep: "mainMenu",
+                label: "No",
+                hidden: false
+            }
+        ],
         choiceType: "button",
         unlockStory: {
-                        unlock: true,
-                        step: "step_1",
-                        decision: "step_1_1"
-                    },
+            unlock: true,
+            step: "step_1",
+            decision: "step_1_1"
+        },
         imageSrc: "assets/setting_images/step_3_2.png",
         imageAlt: "Image of a destroyed camp site."
     }
-    // {
-    //     id: "",
-    //     title: "",
-    //     narration:  [
-    //                     ""
-    //                 ],
-    //     call_to_action: "",
-    //     decisions:  [
-    //                     {
-    //                         nextStep: "",
-    //                         label: "",
-    //                         hidden: false
-    //                     }
-    //                 ],
-    //     choiceType: "",
-    //     unlockStory: {
-    //                     unlock: false,
-    //                     step: "",
-    //                     decision: ""
-    //                 },
-    //     unlockStory: {},
-    //     imageSrc: "",
-    //     imageAlt: ""
-    // }
 ];
